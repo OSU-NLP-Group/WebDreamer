@@ -11,10 +11,6 @@ Code for our paper [*Is Your LLM Secretly a World Model of the Internet*? Model-
 ### Better efficiency than tree search with true interactions
 ![image](https://github.com/user-attachments/assets/d736157e-9b09-43e1-b54e-a17666f4382b)
 
-### Analysis on state representations and planning horizon
-<div style="text-align: center;">
-    <img src="https://github.com/user-attachments/assets/b90eacbb-0496-49a6-8d48-7baa6ae686e4" alt="description" width="600px">
-</div>
 
 ## Structure of this repo
 [main](https://github.com/OSU-NLP-Group/WebDreamer): Different modules of WebDreamer that can be played with independently.
