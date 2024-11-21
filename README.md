@@ -1,8 +1,11 @@
 # WebDreamer: Model-Based Planning for Web Agents
-Code for our paper [*Is Your LLM Secretly a World Model of the Internet*? Model-Based Planning for Web Agents](https://arxiv.org/abs/2411.06559v1). :construction: :construction: Under Construction
 
 ![image](https://github.com/user-attachments/assets/a1189fee-ff43-45fc-a818-3dc6befb6ad2)
 
+## About
+This repo contains the code for our paper [*Is Your LLM Secretly a World Model of the Internet*? Model-Based Planning for Web Agents](https://arxiv.org/abs/2411.06559v1).
+
+Our paper tackles the critical question: “*How to scale inference-time compute for language agents?*” The solution lies in using LLMs as a world model of the internet to predict the outcomes of actions on websites. Our method, **WebDreamer**, employs LLM-based simulation for speculative planning on the web, surpassing reactive baselines while offering greater safety and flexibility compared to tree search methods.
 
 ## Results
 ### Strong performance on VisualWebArena and Mind2Web-live
@@ -32,7 +35,7 @@ Compared to the reactive baselines, WebDreamer significantly improves performanc
 | Reddit      | 5.1      | 13.6        | 5.2        |
 | Shopping    | 4.5      | 11.4        | 4.5        |
 
-#### (b) Task Completion Wall Clock Time
+#### (b) Task Completion Wall Clock Time (s)
 
 | Seconds     | Reactive | Tree Search | WebDreamer |
 |-------------|----------|-------------|------------|
@@ -46,9 +49,9 @@ WebDreamer effectively explores the search space through simulations, reducing t
 ## Structure of this repo
 [main](https://github.com/OSU-NLP-Group/WebDreamer): Different modules of WebDreamer that can be played with independently.
 
-[vwa](https://github.com/OSU-NLP-Group/WebDreamer/tree/vwa): Code to reproduce our experiments on VisualWebArena.
+[vwa](https://github.com/OSU-NLP-Group/WebDreamer/tree/vwa): Code to reproduce our experiments on VisualWebArena. :construction:
 
-[mind2web-live](https://github.com/OSU-NLP-Group/WebDreamer/tree/mind2web-live): Code to reproduce our experiments on Mind2Web-live
+[mind2web-live](https://github.com/OSU-NLP-Group/WebDreamer/tree/mind2web-live): Code to reproduce our experiments on Mind2Web-live. :construction:
 
 ## WebDreamer Modules Usage
 
