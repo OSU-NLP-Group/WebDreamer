@@ -19,6 +19,26 @@ Code for our paper [*Is Your LLM Secretly a World Model of the Internet*? Model-
 
 [mind2web-live](https://github.com/OSU-NLP-Group/WebDreamer/tree/mind2web-live): Code to reproduce our experiments on Mind2Web-live
 
+## WebDreamer Modules Usage
+
+### World Model
+
+```bash
+python world_model.py
+```
+
+### Simulation Scoring
+
+```bash
+python simulation_scoring.py
+```
+
+### Controller
+
+```bash
+python controller.py
+```
+
 
 ## Citation
 ```
