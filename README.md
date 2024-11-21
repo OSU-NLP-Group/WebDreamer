@@ -78,11 +78,44 @@ imagination = world_model.multiple_step_change_prediction(screenshot, screenshot
   * 'accessibility' for an accessibility tree structure.
   * 'html' for HTML structure of the predicted page.
 * k: Number of imagination steps to simulate.
+
+
 ### Simulation Scoring
 
+#### Example Code
 ```bash
-python simulation_scoring.py
+screenshot_path = "demo_data/shopping_0.png"
+screenshots = [Image.open(screenshot_path)]
+actions = ["None"]
+action_description_list = [
+    "type 'red blanket' in the search bar",
+    "click the element Home & Kitchen",
+    "type 'kobe' in the search bar",
+    "type 'the ohio state university' in the search bar"
+]
+task = "Buy the least expensive red blanket (in any size)"
+scores, simulations = evaluate_simulation(
+    screenshots, 
+    actions, 
+    task, 
+    "https://www.amazon.com", 
+    action_description_list, 
+    num_of_sim=3, 
+    num_workers=50, 
+    n=10, 
+    steps=2
+)
 ```
+
+#### Parameters
+* screenshots: List of PIL.Image screenshots representing webpage states.
+* actions: List of actions performed by the agent.
+* task: Description of the goal to achieve on the webpage.
+* url: The current webpage URL.
+* action_description_list: List of action descriptions to evaluate.
+* num_of_sim: Number of simulations per action. 
+* steps: Number of imagination steps per simulation. 
+* num_workers: Number of parallel workers for simulations.
 
 ### Controller
 
