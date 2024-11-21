@@ -27,23 +27,9 @@ Our paper tackles the critical question: “*How to scale inference-time compute
 Compared to the reactive baselines, WebDreamer significantly improves performance by 33.3% and 13.1% on VisualWebArena and Mind2Web-live, respectively.
 
 ### Better efficiency than tree search with true interactions
-#### (a) Number of Action Steps
+<img width="1502" alt="image" src="https://github.com/user-attachments/assets/0afbc22d-b1eb-4026-a167-e1852cde7677">
 
-| Steps       | Reactive | Tree Search | WebDreamer |
-|-------------|----------|-------------|------------|
-| Classifieds | 3.4      | 9.9         | 4.1        |
-| Reddit      | 5.1      | 13.6        | 5.2        |
-| Shopping    | 4.5      | 11.4        | 4.5        |
-
-#### (b) Task Completion Wall Clock Time (s)
-
-| Seconds     | Reactive | Tree Search | WebDreamer |
-|-------------|----------|-------------|------------|
-| Classifieds | 68.3     | 74.9        | 183.6      |
-| Reddit      | 83.5     | 97.2        | 233.7      |
-| Shopping    | 87.7     | 78.7        | 179.4      |
-
-WebDreamer effectively explores the search space through simulations, reducing the reliance on real-world interactions.
+WebDreamer effectively explores the search space through simulations, which largely reduces the reliance on real-world interactions while maintaining robust performance.
 
 
 ## Structure of this repo
