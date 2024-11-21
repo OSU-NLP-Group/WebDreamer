@@ -56,7 +56,7 @@ WebDreamer effectively explores the search space through simulations, reducing t
 The world model module predicts webpage changes in multiple format (change description, a11y tree, html). 
 
 #### Example Code
-```bash
+```python
 world_model = WebWorldModel(OpenAI(api_key=os.environ["OPENAI_API_KEY"]))
 screenshot_path = "demo_data/shopping_0.png"
 screenshot = encode_image(screenshot_path)
@@ -83,7 +83,7 @@ imagination = world_model.multiple_step_change_prediction(screenshot, screenshot
 ### Simulation Scoring
 
 #### Example Code
-```bash
+```python
 screenshot_path = "demo_data/shopping_0.png"
 screenshots = [Image.open(screenshot_path)]
 actions = ["None"]
@@ -119,9 +119,34 @@ scores, simulations = evaluate_simulation(
 
 ### Controller
 
-```bash
-python controller.py
+#### Example Code
+```python
+screenshot_path = "demo_data/shopping_0.png"
+screenshots = [Image.open(screenshot_path)]
+actions = ["None"]  # previous actions so far
+
+action_description = "type 'red skirt' in the search bar"
+task = "Buy the least expensive red skirt (in any size) on Amazon."
+
+action_description_list = [
+    "type 'red skirt' in the search bar",
+    "click the element Women Clothes",
+    "type 'kobe' in the search bar",
+    "type 'the ohio state university' in the search bar"
+]
+
+random.shuffle(action_description_list)
+selected_actions = select_actions(screenshots, actions, task, "https://www.amazon.com", action_description_list)
+# Map selected indices back to action descriptions
+selected_actions = [action_description_list[int(i)] for i in selected_actions]
 ```
+
+#### Parameters
+* screenshots: List of PIL.Image screenshots representing webpage states.
+* actions: List of previously executed actions.
+* task: Description of the goal to achieve on the webpage.
+* url: The current webpage URL.
+* action_description_list: List of action descriptions to evaluate.
 
 
 ## Citation
