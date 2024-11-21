@@ -47,11 +47,11 @@ WebDreamer effectively explores the search space through simulations, reducing t
 
 
 ## Structure of this repo
-[main](https://github.com/OSU-NLP-Group/WebDreamer): Different modules of WebDreamer that can be played with independently.
+[`main`](https://github.com/OSU-NLP-Group/WebDreamer): Different modules of WebDreamer that can be played with independently.
 
-[vwa](https://github.com/OSU-NLP-Group/WebDreamer/tree/vwa): Code to reproduce our experiments on VisualWebArena. :construction:
+[`vwa`](https://github.com/OSU-NLP-Group/WebDreamer/tree/vwa): Code to reproduce our experiments on VisualWebArena. :construction:
 
-[mind2web-live](https://github.com/OSU-NLP-Group/WebDreamer/tree/mind2web-live): Code to reproduce our experiments on Mind2Web-live. :construction:
+[`mind2web-live`](https://github.com/OSU-NLP-Group/WebDreamer/tree/mind2web-live): Code to reproduce our experiments on Mind2Web-live. :construction:
 
 ## WebDreamer Modules Usage
 
