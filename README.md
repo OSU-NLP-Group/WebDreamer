@@ -3,7 +3,7 @@
 ![image](https://github.com/user-attachments/assets/a1189fee-ff43-45fc-a818-3dc6befb6ad2)
 
 ## TODO
-- [ ] Release world model training data (TBD)
+- [ ] Release world model training data
 - [ ] Release checkpoints (within a week)
 
 ## About
