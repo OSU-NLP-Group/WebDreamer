@@ -3,8 +3,8 @@
 ![image](https://github.com/user-attachments/assets/a1189fee-ff43-45fc-a818-3dc6befb6ad2)
 
 ## TODO
-- [ ] Release world model training data 
-- [ ] Release checkpoints
+- [ ] Release world model training data (within two weeks)
+- [ ] Release checkpoints (within a week)
 
 ## About
 This repo contains the code for our paper [*Is Your LLM Secretly a World Model of the Internet*? Model-Based Planning for Web Agents](https://arxiv.org/abs/2411.06559).
@@ -21,7 +21,7 @@ Our paper tackles the critical question: “*How to scale inference-time compute
 | **Online-Mind2Web**| Screenshot        | GPT-4o + Reactive | 26.0%       |
 | | Screenshot        | **GPT-4o + WebDreamer** | 37.0% (↑42.3%) |
 | **Mind2Web-live**  | Screenshot        | GPT-4o + Reactive | 20.2%       |
-|  | Screenshot        | **GPT-4o + WebDreamer**         | 25.0% (23.8%)    |
+|  | Screenshot        | **GPT-4o + WebDreamer**         | 25.0% (↑23.8%)    |
 
 Compared to the reactive baselines, WebDreamer significantly improves performance by 34.1%, 42.3%, and 23.8% on VisualWebArena, Online-Mind2Web, and Mind2Web-live, respectively.
 
