@@ -13,15 +13,15 @@ Our paper tackles the critical question: “*How to scale inference-time compute
 
 ## Results
 ### Strong performance on VisualWebArena and Mind2Web-live
-| Benchmark        | Observation \( O \) | Method                                 | Success Rate       |
-|------------------|----------------------|----------------------------------------|-----------------|--------------------|
-| **VisualWebArena** | Screenshot+SoM    | GPT-4o + Reactive | 17.6%       |
-|  | Screenshot+SoM    | GPT-4o + Tree Search | 26.2%    |
-|  | Screenshot+SoM    | **GPT-4o + WebDreamer** | 23.6% (↑34.1%) |
-| **Online-Mind2Web**| Screenshot        | GPT-4o + Reactive | 26.0%       |
-| | Screenshot        | **GPT-4o + WebDreamer** | 37.0% (↑42.3%) |
-| **Mind2Web-live**  | Screenshot        | GPT-4o + Reactive | 20.2%       |
-|  | Screenshot        | **GPT-4o + WebDreamer**         | 25.0% (↑23.8%)    |
+| Benchmark        | Method                                 | Success Rate       |
+|------------------|-----------------|--------------------|
+| **VisualWebArena** | GPT-4o + Reactive | 17.6%       |
+|  | GPT-4o + Tree Search | 26.2%    |
+|  | **GPT-4o + WebDreamer** | 23.6% (↑34.1%) |
+| **Online-Mind2Web** | GPT-4o + Reactive | 26.0%       |
+|  | **GPT-4o + WebDreamer** | 37.0% (↑42.3%) |
+| **Mind2Web-live**   | GPT-4o + Reactive | 20.2%       |
+|  | **GPT-4o + WebDreamer**         | 25.0% (↑23.8%)    |
 
 Compared to the reactive baselines, WebDreamer significantly improves performance by 34.1%, 42.3%, and 23.8% on VisualWebArena, Online-Mind2Web, and Mind2Web-live, respectively.
 
