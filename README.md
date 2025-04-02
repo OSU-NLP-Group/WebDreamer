@@ -2,6 +2,10 @@
 
 ![image](https://github.com/user-attachments/assets/a1189fee-ff43-45fc-a818-3dc6befb6ad2)
 
+## TODO
+- [ ] Release world model training data 
+- [ ] Release checkpoints
+
 ## About
 This repo contains the code for our paper [*Is Your LLM Secretly a World Model of the Internet*? Model-Based Planning for Web Agents](https://arxiv.org/abs/2411.06559).
 
@@ -9,22 +13,17 @@ Our paper tackles the critical question: “*How to scale inference-time compute
 
 ## Results
 ### Strong performance on VisualWebArena and Mind2Web-live
-| Benchmark        | Observation \( O \) | Method                                 | Completion Rate | Success Rate       |
+| Benchmark        | Observation \( O \) | Method                                 | Success Rate       |
 |------------------|----------------------|----------------------------------------|-----------------|--------------------|
-| **VisualWebArena** | Screenshot+SoM      | Gemini-1.5-Pro + Reactive (Koh et al., 2024a) | -               | 12.0%             |
-|                  |                      | GPT-4 + Reactive (Koh et al., 2024a)   | -               | 16.4%             |
-|                  |                      | GPT-4o + Reactive (Koh et al., 2024a)  | -               | 17.7% †           |
-|                  |                      | GPT-4o + Tree Search (Koh et al., 2024b) | -             | 26.4%             |
-|                  |                      | **GPT-4o + WebDreamer**                   | -               | 23.6% (↑33.3%)    |
-| **Mind2Web-live**| HTML                | GPT-4 + Reactive (Pan et al., 2024b)  | 48.8%           | 23.1%             |
-|                  |                      | Claude-3-Sonnet + Reactive (Pan et al., 2024b) | 47.9%      | 22.1%             |
-|                  |                      | Gemini-1.5-Pro + Reactive (Pan et al., 2024b) | 44.6%      | 22.3%             |
-|                  |                      | GPT-4-turbo + Reactive (Pan et al., 2024b) | 44.3%         | 21.1%             |
-|                  |                      | GPT-3.5-turbo + Reactive (Pan et al., 2024b) | 40.2%         | 16.5%             |
-|                  |                      | GPT-4o + Reactive (Pan et al., 2024b)  | 47.6%           | 22.1%             |
-|                  |                      | **GPT-4o + WebDreamer**                   | 49.9%           | 25.0% (↑13.1%)    |
+| **VisualWebArena** | Screenshot+SoM    | GPT-4o + Reactive | 17.6%       |
+|  | Screenshot+SoM    | GPT-4o + Tree Search | 26.2%    |
+|  | Screenshot+SoM    | **GPT-4o + WebDreamer** | 23.6% (↑34.1%) |
+| **Online-Mind2Web**| Screenshot        | GPT-4o + Reactive | 26.0%       |
+| | Screenshot        | **GPT-4o + WebDreamer** | 37.0% (↑42.3%) |
+| **Mind2Web-live**  | Screenshot        | GPT-4o + Reactive | 20.2%       |
+|  | Screenshot        | **GPT-4o + WebDreamer**         | 25.0% (23.8%)    |
 
-Compared to the reactive baselines, WebDreamer significantly improves performance by 33.3% and 13.1% on VisualWebArena and Mind2Web-live, respectively.
+Compared to the reactive baselines, WebDreamer significantly improves performance by 34.1%, 42.3%, and 23.8% on VisualWebArena, Online-Mind2Web, and Mind2Web-live, respectively.
 
 ### Better efficiency than tree search with true interactions
 <img width="1502" alt="image" src="https://github.com/user-attachments/assets/0afbc22d-b1eb-4026-a167-e1852cde7677">
@@ -141,7 +140,7 @@ selected_actions = [action_description_list[int(i)] for i in selected_actions]
 ## Citation
 ```
 @article{DBLP:journals/corr/abs-2411-06559,
-  author    = {Yu Gu and Boyuan Zheng and Boyu Gou and Kai Zhang and Cheng Chang and Sanjari Srivastava and Yanan Xie and Peng Qi and Huan Sun and Yu Su},
+  author    = {Yu Gu and Kai Zhang and Yuting Ning and Boyuan Zheng and Boyu Gou and Tianci Xue and Cheng Chang and Sanjari Srivastava and Yanan Xie and Peng Qi and Huan Sun and Yu Su},
   title     = {Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents},
   journal   = {CoRR},
   volume    = {abs/2411.06559},
