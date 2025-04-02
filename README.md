@@ -139,7 +139,7 @@ selected_actions = [action_description_list[int(i)] for i in selected_actions]
 
 ## Citation
 ```
-@article{DBLP:journals/corr/abs-2411-06559,
+@article{Gu2024WebDreamer,
   author    = {Yu Gu and Kai Zhang and Yuting Ning and Boyuan Zheng and Boyu Gou and Tianci Xue and Cheng Chang and Sanjari Srivastava and Yanan Xie and Peng Qi and Huan Sun and Yu Su},
   title     = {Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents},
   journal   = {CoRR},
