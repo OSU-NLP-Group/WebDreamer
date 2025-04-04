@@ -4,7 +4,7 @@
 
 ## TODO
 - [ ] Release world model training data
-- [ ] Release checkpoints (within a week)
+- [x] Release checkpoints
 
 ## About
 This repo contains the code for our paper [*Is Your LLM Secretly a World Model of the Internet*? Model-Based Planning for Web Agents](https://arxiv.org/abs/2411.06559).
@@ -136,6 +136,9 @@ selected_actions = [action_description_list[int(i)] for i in selected_actions]
 * url: The current webpage URL.
 * action_description_list: List of action descriptions to evaluate.
 
+### Using Dreamer-7B
+We released Dreamer-7B and its VWA in-domain continue trained variants (https://huggingface.co/osunlp/Dreamer-7B).
+Please note that current Dreamer-7B only supports image (w/ or w/o SoM) observation space.
 
 ## Citation
 ```
