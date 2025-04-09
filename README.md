@@ -2,14 +2,15 @@
 
 ![image](https://github.com/user-attachments/assets/a1189fee-ff43-45fc-a818-3dc6befb6ad2)
 
-## TODO
-- [ ] Release world model training data
-- [x] Release checkpoints
+## Release Plan
+- [x] Release world model [training data](https://huggingface.co/datasets/osunlp/Dreamer-V1-Data)
+- [x] Release [checkpoints](https://huggingface.co/osunlp/Dreamer-7B)
 
 ## About
 This repo contains the code for our paper [*Is Your LLM Secretly a World Model of the Internet*? Model-Based Planning for Web Agents](https://arxiv.org/abs/2411.06559).
 
 Our paper tackles the critical question: “*How to scale inference-time compute for language agents?*” The solution lies in using LLMs as a world model of the internet to predict the outcomes of actions on websites. Our method, **WebDreamer**, employs LLM-based simulation for speculative planning on the web, surpassing reactive baselines while offering greater safety and flexibility compared to tree search methods.
+All resources (including training data and resulting models) are available at [HF Collection](https://huggingface.co/collections/osunlp/webdreamer-67ee17325839c8a02339dbfb).
 
 ## Results
 ### Strong performance on VisualWebArena and Mind2Web-live
