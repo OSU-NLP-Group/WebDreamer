@@ -146,11 +146,6 @@ Please note that current Dreamer-7B only supports image (w/ or w/o SoM) observat
 @article{Gu2024WebDreamer,
   author    = {Yu Gu and Kai Zhang and Yuting Ning and Boyuan Zheng and Boyu Gou and Tianci Xue and Cheng Chang and Sanjari Srivastava and Yanan Xie and Peng Qi and Huan Sun and Yu Su},
   title     = {Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents},
-  journal   = {CoRR},
-  volume    = {abs/2411.06559},
-  year      = {2024},
-  url       = {https://arxiv.org/abs/2411.06559},
-  eprinttype= {arXiv},
-  eprint    = {2411.06559},
+  journal   = {Transactions on Machine Learning Research},
 }
 ```
