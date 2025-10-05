@@ -143,9 +143,10 @@ Please note that current Dreamer-7B only supports image (w/ or w/o SoM) observat
 
 ## Citation
 ```
-@article{Gu2024WebDreamer,
+@article{Gu2025WebDreamer,
   author    = {Yu Gu and Kai Zhang and Yuting Ning and Boyuan Zheng and Boyu Gou and Tianci Xue and Cheng Chang and Sanjari Srivastava and Yanan Xie and Peng Qi and Huan Sun and Yu Su},
   title     = {Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents},
   journal   = {Transactions on Machine Learning Research},
+  year      = {2025}
 }
 ```
