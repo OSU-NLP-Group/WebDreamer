@@ -173,17 +173,18 @@ async def _throttled_openai_chat_completion_acreate(
     max_tokens: int,
     top_p: float,
     limiter: aiolimiter.AsyncLimiter,
-) -> dict[str, Any]:
+) -> str:
     async with limiter:
         for _ in range(3):
             try:
-                return await aclient.chat.completions.create(
+                response = await aclient.chat.completions.create(
                     model=model,
                     messages=messages,
                     temperature=temperature,
                     max_tokens=max_tokens,
                     top_p=top_p,
                 )
+                return response.choices[0].message.content or ""
             except openai.RateLimitError:
                 logging.warning(
                     "OpenAI API rate limit exceeded. Sleeping for 10 seconds."
@@ -195,7 +196,7 @@ async def _throttled_openai_chat_completion_acreate(
             except openai.APIError as e:
                 logging.warning(f"OpenAI API error: {e}")
                 break
-        return {"choices": [{"message": {"content": ""}}]}
+        return ""
 
 
 async def agenerate_from_openai_chat_completion(
@@ -238,7 +239,7 @@ async def agenerate_from_openai_chat_completion(
         for message in messages_list
     ]
     responses = await tqdm_asyncio.gather(*async_responses)
-    return [x["choices"][0]["message"]["content"] for x in responses]
+    return responses
 
 
 @retry_with_exponential_backoff
